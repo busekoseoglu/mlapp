@@ -1,7 +1,3 @@
-import numpy as np
-import json
-import sys
-import os
 import pandas as pd
 import joblib
 from fastapi import FastAPI
@@ -80,8 +76,4 @@ def predict_status(data : Data):
 
 if __name__ == "__main__":
     # Changed it from app to 'main:app' to reload changes automatically.
-    uvicorn.run('app:app', host="0.0.0.0", port=8000, reload=True)
-        
-
-
-
+    uvicorn.run('app:app', host="0.0.0.0", port=80, reload=True)
